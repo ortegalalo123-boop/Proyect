@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav.menu {
+    text-align: center;
+    margin: 1rem 0;
+    background-color: #fff;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+nav.menu li {
+    margin: 0 1rem;
+}
+
+nav.menu a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav.menu a:hover,
+nav.menu a:focus {
+    background-color: #4caf50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+/* show target or default first section */
+#imagenes-tab:target,
+#audios-tab:target,
+#videos-tab:target {
+    display: block;
+}
+
+/* when no hash, show images */
+body:not(:target) #imagenes-tab {
+    display: block;
+}
+
+.animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+.animal-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.animal-link:hover,
+.animal-link:focus {
+    text-decoration: underline;
+}
+
+.animal-item {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animal-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.animal-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.animal-item audio {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+footer {
+    /* background-color removed */
+    color: #333;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Añade esto a tu CSS para evitar saltos bruscos al cambiar de pestaña */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejora la visualización de los videos */
+video {
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Ajuste del Footer para que no tape contenido */
+footer {
+    position: relative; /* Cambiado de fixed a relative */
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e0e0e0;
+}
+
+/* Para que la sección activa siempre tenga espacio arriba */
+.tab-content {
+    padding-top: 20px;
+    min-height: 80vh; /* Asegura que siempre haya espacio visual */
+}
+.formulario-seccion {
+    padding: 3rem 1rem;
+    background-color: #f0f8ff; /* Un verde muy clarito para diferenciar la zona */
+    text-align: center;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2e7d32;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    box-sizing: border-box; /* Muy importante para que no se salga del cuadro */
+}
+
+.btn-enviar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: #388e3c;
+}
+.botones-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 1rem;
+}
+
+.btn-saludo {
+    background-color: #2196F3; /* Color azul para diferenciarlo */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 1; /* Para que ambos botones midan lo mismo */
+}
+
+.btn-saludo:hover {
+    background-color: #1976D2;
+}
+
+/* Ajustamos el de enviar para que también use flex */
+.btn-enviar {
+    flex: 1;
+    margin-top: 0; /* Quitamos el margen superior que tenía antes */
+}
